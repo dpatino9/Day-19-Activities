@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Employee Tracker</title>
+<!-- Firebase -->
+	<script src="https://www.gstatic.com/firebasejs/3.4.0/firebase.js"></script>
+<!-- Latest compiled and minified CSS -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+<!-- Optional theme -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+	<!-- CSS -->
+	<link rel="stylesheet" href="style.css">
+	<!-- Javascript -->	
+	<!-- JQuery-->
+	<script   src="https://code.jquery.com/jquery-2.2.4.js"   integrity="sha256-iT6Q9iMJYuQiMWNd9lDyBUStIq/8PuOW33aOqmvFpqI="   crossorigin="anonymous"></script>
+	<script src="https://cdn.jsdelivr.net/momentjs/2.12.0/moment.min.js"></script>
+</head>
+<body>
+<div class="container">
+	<div class="jumbotron">
+		<h1 class="display-3">Employee Data Management</h1>
+		<br>
+		<p class="lead">A Comprehensive Directory of Employee Billable Hours</p>
+	<!-- close jumbotron -->
+	</div>
+	<div class="panel panel-primary">
+	  	<div class="panel-heading">Current Employees</div>
+	  	<div class="panel-body">
+		<div class="table-responsive">
+		  <table class="table table-hover table-striped currentEmployee" id='employeeTable'>
+		    <thead>
+		      <tr>
+		        <th>Employee Name</th>
+		        <th>Role</th>
+		        <th>Start Date</th>
+		        <th>Months Worked</th>
+		        <th>Monthly Rate ($)</th>
+		        <th>Total Billed($)</th>
+		      </tr>
+		    </thead>
+		    <tbody>
+		      <tr>
+		        <td id="name">Ahmed</td>
+		        <td id="role">Space Jame Enthusiast</td>
+		        <td id="start">01/01/89</td>
+		        <td id="months">332</td>
+		        <td id="rate">2</td>
+		        <td id="billed">2</td>
+		      </tr>
+		    </tbody>
+		  </table>
+		  </div>
+	  	</div>
+	</div>
+	<div class="panel panel-primary">
+      	<div class="panel-heading">Add Employees</div>
+      	<div class="panel-body">  	
+	      	<label for="newName">Employee Name</label>
+				<div class="input-group">
+				  <input type="text" class="form-control" id="newName">
+				</div>
+
+			<label for="newDestination">Role</label>
+				<div class="input-group">
+				  <input type="text" class="form-control" id="newDestination">
+				</div>
+			
+			<label for="newTime">Start Date (DD/MM/YY)</label>
+				<div class="input-group">
+				  <input type="text" class="form-control" id="newTime">
+				</div>
+
+			<label for="newFreq">Monthly Rate</label>
+				<div class="input-group">
+				  <input type="text" class="form-control" id="newFreq">
+				</div>
+			<br>	
+			<button type="submit" class="btn btn-primary" id="addEmployee">Submit</button>
+		</div>
+    </div>
+<!-- end container -->
+</div>
+
+<!-- Bootstrap JS -->
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+<script type="text/javascript" src="app.js"></script>
+</body>
+</html>
